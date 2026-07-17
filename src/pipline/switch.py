@@ -1,4 +1,4 @@
-import pipeline
+import pipline.pipeline as pipeline
 
 def main():
     pipeline.run_pipeline()

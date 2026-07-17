@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1] / 'src'))
 
-from database import create_database
+from pipline.database import create_database
 from config import DB_DIR, SCHEMA_PATH
 
 

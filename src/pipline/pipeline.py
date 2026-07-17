@@ -1,12 +1,12 @@
-from database import create_database
-from extract import load_arch
-from transform import (
+from pipline.database import create_database
+from pipline.extract import load_arch
+from pipline.transform import (
     transform_patients,
     transform_services,
     transform_staff,
     transform_schedule,
 )
-from load import insert_data
+from pipline.load import insert_data
 import config
 
 
