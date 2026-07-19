@@ -1,5 +1,5 @@
 import pandas as pd
-import config
+import config as config
 
 def load_arch(filename):
     path = config.RAW_DATA_DIR / filename

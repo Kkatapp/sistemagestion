@@ -1,17 +1,16 @@
 # Creación y administración del SQLite
 import sqlite3
 from pathlib import Path
-from config import DB_DIR, SCHEMA_PATH
+import config
 
 
 def get_connection():
-    DB_DIR.mkdir(parents=True, exist_ok=True)
-    return sqlite3.connect(DB_DIR / "database.db")
+    config.DB_DIR.mkdir(parents=True, exist_ok=True)
+    return sqlite3.connect(config.DB_DIR / "database.db")
 
 
 def delete_database():
-    print("buenas")
-    db_path = DB_DIR / "database.db"
+    db_path = config.DB_DIR / "database.db"
     if db_path.exists():
         db_path.unlink()
 
@@ -26,9 +25,9 @@ def execute_script(script_path):
 
 def create_database():
     delete_database()
-    execute_script(SCHEMA_PATH)
+    execute_script(config.SCHEMA_PATH)
 
-    with sqlite3.connect(DB_DIR / "database.db") as conn:
+    with sqlite3.connect(config.DB_DIR / "database.db") as conn:
         cursor = conn.cursor()
 
         cursor.execute("PRAGMA table_info(patients)")

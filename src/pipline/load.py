@@ -1,7 +1,7 @@
 # Subir los datos de un dataframe a una base de datos
 
 import sqlite3
-import config
+import config as config
 
 def insert_data(dataframe, table_name):
     try:

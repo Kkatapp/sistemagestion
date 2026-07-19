@@ -1,5 +1,5 @@
 import sqlite3
-import config
+import config as config
 import pandas as pd
 
 # Consultas básicas

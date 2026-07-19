@@ -1,8 +1,9 @@
 import queries
+from pipline import process
 
 def main():
-    paciente = queries.get_patient("PAT-09484753")
-    print(paciente)
-    
+    print(process.__file__)
+    process.run_pipeline()
+
 if __name__ == "__main__":
     main()
