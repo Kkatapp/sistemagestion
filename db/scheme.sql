@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS patients (
 );
 
 CREATE TABLE IF NOT EXISTS ingreso_paciente (
-    ingreso_id VARCHAR(50) PRIMARY KEY,
+    ingreso_id VARCHAR(50) PRIMARY KEY AUTO_INCREMENT,
     patient_id TEXT,
     service_id TEXT,
     arrival_date DATE,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS staff (
 );
 
 CREATE TABLE IF NOT EXISTS staff_attendance (
-    attendance_id VARCHAR(50) PRIMARY KEY,
+    attendance_id VARCHAR(50) PRIMARY KEY AUTO_INCREMENT,
     staff_id TEXT,
     service_id TEXT,
     week INTEGER,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS staff_attendance (
 );
 
 CREATE TABLE IF NOT EXISTS operational_shift (
-    shift_id VARCHAR(50) PRIMARY KEY,
+    shift_id VARCHAR(50) PRIMARY KEY AUTO_INCREMENT,
     service_id TEXT,
     week INTEGER,
     available_beds INTEGER,
